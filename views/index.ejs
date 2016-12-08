@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> <%= theTitle %> </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> <%= theTitle %> </h1>
+    <h2> <%= desc %> </h2>
+    
+    <form action="/file-upload" enctype="multipart/form-data" method="post" >
+        <input type="file" name="file"></input>
+        <input type="submit">
+    </form>
+    
+    <% if (typeof filename !== 'undefined') { %>
+      <script>alert("Filename: <%=filename%> \nFilesize: <%=filesize%> b")</script>
+    <% } %>
+    
+
+
+<h3>Objective</h3>
+
+<p>Build a full stack JavaScript app that is functionally <a href="https://aryanj-file-size.herokuapp.com/">similar to this</a> and deploy it to Heroku.</p>
+
+
+<p>Here are the specific user stories you should implement for this project:</p>
+
+<p>**User Story**: I can submit a FormData object that includes a file upload.</p>
+
+<p>**User Story**: When I submit something, I will receive the file size in bytes within the JSON response</p>
+
+<p>Hint: You may want to use this package: https://www.npmjs.com/package/multer</p>
+
+
+
+<h3>Usage:</h3>
+
+<p>Select a file and click Submit. The file will be uploaded and the file size is returned via an alert pop up. The file is deleted from the server once the file size has been returned.</p>
+    
+  </body>
+</html>
