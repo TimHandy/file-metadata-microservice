@@ -12,14 +12,14 @@ router.post('/', upload.single('file'), function(req, res, next) {
 
     res.render('index.ejs', {
         filename: req.file.originalname,
-        filesize: req.file.size, 
-    });
+        filesize: req.file.size 
+    })
     
     // Delete the file after getting the relevant information from it
     fs.unlink(req.file.path, (err) => {
-      if (err) throw err;
-      console.log('successfully deleted');
-    });
-});
+        if (err) throw err
+        console.log('successfully deleted')
+    })
+})
 
-module.exports = router;
+module.exports = router

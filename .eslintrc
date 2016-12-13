@@ -30,7 +30,7 @@
             "unix"
         ],
         "semi": [
-            "warning",
+            2,
             "never"
         ],
         "no-console": 0,     // permits use of console.log
